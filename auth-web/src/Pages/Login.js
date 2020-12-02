@@ -3,8 +3,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from 'yup';
 import '../style/pages-login.css';
 import axios from 'axios';
+import {useHistory} from 'react-router-dom';
 
 const Login = () => {
+
+  const history = useHistory();
 
   // deve retornar uma token
   const validation = yup.object().shape({
@@ -13,7 +16,11 @@ const Login = () => {
   });
 
   function handleSubmit(data) {
-   axios.post('http://localhost:8080/api/auth',data).then(res => console.log(res))
+   axios.post('http://localhost:5000/v1/api/auth',data).then(res => {
+     const {result} = res.data;
+     localStorage.setItem('acesso', result);
+     history.push('/');
+   })
   }
 
   return (

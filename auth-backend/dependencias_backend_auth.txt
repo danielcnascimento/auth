@@ -1,0 +1,32 @@
+Backend - dependencias:
+
+// yarn add ->
+
+// gerencia a parte das rotas
+koa
+koa-router
+
+// permite requisições a partir de determinados IPs
+@koa/cors
+
+// transforma as requisições em JSON, assim podemos consultar usando as informações requisitadas
+koa-bodyparser
+
+// faz a validação dos dados
+boom
+
+// faz a validação de requisição
+fastest-validator
+
+//SGDB - permite gerenciar a cominucação entre o servidor e o banco de dados (realiza o CRUD de informações)
+sequelize
+sequelize-cli
+
+//sqlite - mantem arquivos de forma local, através de arquivos.
+sqlite3
+
+//nodemon - Dependencia de desenvolvimento
+nodemon --D
+
+//baixar jsonwebtoken para que seja gerado uma token, assim podendo validar demais páginas no frontend.
+// yarn add jsonwebtoken

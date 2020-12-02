@@ -6,15 +6,16 @@ import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import NotFound from './Pages/NotFound';
+import PrivateRoute from './Pages/PrivateRoute';
 
 const Routes = () => {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <PrivateRoute exact path="/" component={Home} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          <Route component={NotFound} />
+          <PrivateRoute component={NotFound} />
         </Switch>
       </BrowserRouter>
     );
