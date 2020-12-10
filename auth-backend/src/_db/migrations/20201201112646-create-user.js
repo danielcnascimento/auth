@@ -20,6 +20,12 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
+      message: { // > 09/12/2020
+        type: Sequelize.STRING
+      },
+      subject: { // > 09/12/2020
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

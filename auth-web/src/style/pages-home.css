@@ -1,0 +1,60 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: #7F3990;;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 10vh 10vh 70vh 10vh;
+    grid-template-areas: "h h" "a f" "a st" "a addf";
+}
+
+header {
+    font-size: 2rem;
+    padding: 10px;
+    background: #7F3990;;
+    grid-area: h;
+}
+
+aside{
+    padding: 10px;
+    background: rgba(82, 82, 82, 0.6);
+    border-radius: 10px;
+    grid-area: a;
+}
+
+.feature {
+    padding: 10px;
+    background: #7F3990;
+    grid-area: f;
+}
+
+.subject-target {
+    padding: 10px;
+    background: #7F3990;
+    grid-area: st;
+}
+
+.subject-target .subject {
+    margin:0 auto;
+    padding: 0px 3px 5px 5px;
+
+    background: rgba(82, 82, 82, 0.6);
+    box-shadow: 1px 0.8px 1px black;
+    color: white;
+    border-radius: 10px;
+    
+    width: 90%;
+    height: 90%;
+}
+
+
+
+.add-feature {
+    padding: 10px;
+    background: #7F3990;
+    grid-area: addf;
+}

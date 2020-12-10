@@ -12,7 +12,7 @@ koa-router
 // transforma as requisições em JSON, assim podemos consultar usando as informações requisitadas
 koa-bodyparser
 
-// faz a validação dos dados
+// faz o retorno da validação dos dados entre request e response
 boom
 
 // faz a validação de requisição
