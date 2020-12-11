@@ -17,7 +17,7 @@ const Home = () => {
       <div className="feature">
         <MessageFeatures />
       </div>
-      <ModalProvider>
+      <ModalProvider className="modal-container" >
         <div className="subject-target">
           My subject target:
           <div className="subject">

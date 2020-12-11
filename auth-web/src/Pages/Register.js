@@ -34,7 +34,7 @@ const Register = () => {
       >
         <Form className="login">
 
-        <div className="login-group">
+          <div className="login-group">
             <Field name="firstName" className="login-field" />
             <ErrorMessage
               component="span"

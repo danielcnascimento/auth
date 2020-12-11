@@ -58,3 +58,7 @@ aside{
     background: #7F3990;
     grid-area: addf;
 }
+
+.modal-container {
+    background: blue;
+}
