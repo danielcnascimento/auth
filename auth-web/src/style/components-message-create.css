@@ -1,4 +1,17 @@
 
+
+.modal-create-container {
+    flex-direction: row;
+    background: rgb(101, 64, 122);
+    color: black;
+}
+
+.modal-create-form {
+    max-width: 600px;
+    height: 69vh;
+    margin: 0 auto;
+}
+
 .close-area {
     display: flex;
     justify-content: flex-end;
@@ -28,10 +41,89 @@
     cursor: pointer;
 }
 
-.modal-create-container {
-    flex-direction: row;
-    background: rgb(101, 64, 122);
-    color: black;
+.modal-submit-btn-area {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-submit-btn {
+    width: 130px;
+    height: 35px;
+    
+    font-family: monospace;
+    font-weight: 400;
+    font-size: larger;
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #00cc99;
+    border:none;
+    border-radius: 50px;
+    box-shadow: 0px 2px 3px black;
+}
+
+.modal-submit-btn:focus{
+    outline: none;
+}
+
+.modal-submit-btn:hover {
+    background: #00dd99;
+    box-shadow: 0px 3px 5px black;
+    cursor: pointer;
+}
+
+.form-field-label {
+    margin-bottom: 3px;
+    color: white;
+    font-weight: 100;
+
+    font-size: medium;
+}
+
+.form-field-label:hover {
+    cursor: pointer;
+}
+
+.modal-create-form-group {
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.modal-create-form-field {
+    width: 100%;
+    height: 40px;
+
+    background: rgb(77, 48, 94);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px black;
+}
+
+.modal-create-form-field:focus {
+    outline: none;
+    box-shadow: 0px 2px 2px black;
+}
+
+.modal-create-form-field-message {
+    width: 100%;
+    height: 30vh;
+
+    resize: vertical;
+    background: rgb(77, 48, 94);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px black;
+}
+
+.modal-create-form-field-message:focus {
+    outline: none;
+    box-shadow: 0px 2px 2px black;
 }
 
 .create-message-btn {

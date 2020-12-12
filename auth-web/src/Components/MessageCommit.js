@@ -3,7 +3,8 @@ import ReactModal from "react-modal";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-import { RiMailAddLine } from "react-icons/ri";
+import { RiMailAddLine, RiMailSendFill } from "react-icons/ri";
+import { GrSend } from 'react-icons/gr';
 import {ImBin} from "react-icons/im";
 import { useModal } from "react-modal-hook";
 import "../style/components-message-create.css";
@@ -13,9 +14,8 @@ import "../style/components-message-create.css";
 const MessageCommit = () => {
   const [showModal, hideModal] = useModal(() => (
     <ReactModal isOpen>
-     
       <div className="modal-create-container">
-      <div  className="close-area">
+        <div className="close-area">
           <button onClick={hideModal} className="close-btn">
             <ImBin size={25} color="#fff" />
           </button>
@@ -23,8 +23,15 @@ const MessageCommit = () => {
         <div>
           <Formik initialValues={{}}>
             <Form className="modal-create-form">
+              <div className="modal-submit-btn-area">
+                <button type="submit" className="modal-submit-btn">
+                <RiMailSendFill size={25} color="#fff" /> ENVIAR 
+                </button>
+              </div>
               <div className="modal-create-form-group">
-                <label htmlFor="firstName" >Nome:</label>
+                <label htmlFor="firstName" className="form-field-label">
+                  Nome:
+                </label>
                 <Field
                   className="modal-create-form-field"
                   name="firstName"
@@ -36,9 +43,13 @@ const MessageCommit = () => {
                 />
               </div>
               <div className="modal-create-form-group">
+                <label htmlFor="subject" className="form-field-label">
+                  Assunto:
+                </label>
                 <Field
                   className="modal-create-form-field"
                   name="subject"
+                  id="subject"
                 ></Field>
                 <ErrorMessage
                   name="subject"
@@ -46,9 +57,14 @@ const MessageCommit = () => {
                 />
               </div>
               <div className="modal-create-form-group">
+                <label htmlFor="message" className="form-field-label">
+                  Mensagem:
+                </label>
                 <Field
-                  className="modal-create-form-field"
+                  className="modal-create-form-field-message"
                   name="message"
+                  as="textarea"
+                  id="message"
                 ></Field>
                 <ErrorMessage
                   name="message"
