@@ -12,7 +12,7 @@ const Messages = () => {
       console.log(rows.data);
       setPersons(rows.data);
     });
-  }, []);
+  }, [persons]);
 
   const { users } = persons;
 

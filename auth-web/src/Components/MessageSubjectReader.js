@@ -11,7 +11,7 @@ const MessageSubjectReader = () => {
     axios.get(`http://localhost:5000/usuario/${params.id}`).then((resp) => {
       setMessage(resp.data);
     });
-  }, [params.id]);
+  }, [message, params.id]);
 
   return (
     <>
