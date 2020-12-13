@@ -7,20 +7,15 @@ const MessageSubjectReader = () => {
 
   const params = useParams();
 
-  console.log(params.id);
-
   React.useEffect(() => {
     axios.get(`http://localhost:5000/usuario/${params.id}`).then((resp) => {
-      console.log(resp.data);
       setMessage(resp.data);
     });
   }, [params.id]);
 
-  console.log(message);
-
   return (
     <>
-      { !params.id ? (
+      {!params.id ? (
         <h1>Carregando mensagem...</h1>
       ) : (
         <div key={message.id}>

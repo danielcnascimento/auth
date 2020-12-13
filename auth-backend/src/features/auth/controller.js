@@ -26,7 +26,12 @@ module.exports = {
 
         if(user){
             console.log('esse usuario foi encontrado: ' + user) 
-            response.body = {result : jwt.sign({email : user.email}, 'mysecret')}
+            response.body = {result : jwt.sign({
+                email : user.email, 
+                firstName: user.firstName, 
+                lastName: user.lastName,
+                password: user.password
+            }, 'mysecret')}
         } else {
             response.status = 401;
             response.body = {result: Boom.unauthorized()}
