@@ -9,10 +9,10 @@ const Messages = () => {
 
   React.useEffect(() => {
     axios.get("http://localhost:5000/usuarios").then((rows) => {
-      console.log(rows.data);
-      setPersons(rows.data);
+      console.log(rows);
+      setPersons(rows.data)
     });
-  }, [persons]);
+  }, []);
 
   const { users } = persons;
 
